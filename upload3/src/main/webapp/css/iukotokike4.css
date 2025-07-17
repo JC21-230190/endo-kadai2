@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table,
+td,
+th {
+	border: solid 1px #000000;
+}
+
+td,
+th {
+	padding: 5px 10px;
+}
+
+img {
+	max-height: 100px;
+}
+
+header {
+	background-color: #336633;
+}
+
+h1 {
+	color: #ffffff;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+main {
+	width: 800px;
+	margin: 20px auto;
+}
+
+img {
+	max-width: 190px;
+	max-height: 150px;
+}
+
+
+.imagelist {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);/* 横に4列 */
+	column-gap: 2px;
+	row-gap: 2px;
+}
+
+.image {
+	margin: 2px;
+	padding: 3px;
+	border: 1px solid #666
+}
+
+
+
+.buttonArea {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  /* ① グリッドを 1 列にする */
+  .imagelist {
+    grid-template-columns: 1fr;
+  }
+
+  /* ② フォントサイズを vw にする（例：4vw くらいから調整） */
+  body {
+    font-size: 4vw;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  /* 画像も幅いっぱいに */
+  .imagelist img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  main {
+    width: 90%; /* main 幅も調整して中央寄せ */
+    margin: 20px auto;
+  }
+
+  .image {
+    padding: 12px; /* 余白広め */
+  } 
+}
